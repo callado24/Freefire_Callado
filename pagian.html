@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zona Free Fire | Noticias, Guías y Consejos</title>
+  <meta name="description" content="Noticias, guías, consejos y novedades de Free Fire.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      background: #111118;
+      border-bottom: 1px solid #292936;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #ffb300;
+    }
+
+    .logo span {
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #ddd;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #ffb300;
+    }
+
+    .theme-btn {
+      border: none;
+      background: #24242e;
+      color: white;
+      padding: 9px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* CONTENEDOR */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 25px 20px;
+    }
+
+    /* ANUNCIO */
+    .ad {
+      min-height: 100px;
+      background: #15151d;
+      border: 1px dashed #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #888;
+      margin: 20px 0;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 330px;
+      border-radius: 16px;
+      padding: 45px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.35)),
+        linear-gradient(135deg, #302000, #131313);
+      margin-bottom: 30px;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 60px);
+      line-height: 1.05;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #ffb300;
+    }
+
+    .hero p {
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ffb300;
+      color: #111;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #ffc533;
+    }
+
+    /* BUSCADOR */
+    .search-box {
+      display: flex;
+      margin-bottom: 25px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px;
+      background: #17171f;
+      color: white;
+      border: 1px solid #333;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px;
+    }
+
+    /* CATEGORIAS */
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .category {
+      background: #1a1a22;
+      border: 1px solid #30303a;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      color: #ddd;
+    }
+
+    .category:hover {
+      border-color: #ffb300;
+      color: #ffb300;
+    }
+
+    /* ARTICULOS */
+    .section-title {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #15151d;
+      border: 1px solid #292936;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #ffb300;
+    }
+
+    .card-img {
+      height: 180px;
+      background: linear-gradient(135deg, #2d2000, #25252d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .tag {
+      color: #ffb300;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .card h3 {
+      margin: 8px 0;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .read {
+      color: #ffb300;
+      font-weight: bold;
+    }
+
+    /* NEWSLETTER */
+    .newsletter {
+      margin: 40px 0;
+      padding: 35px;
+      background: #17171f;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      margin-bottom: 10px;
+    }
+
+    .newsletter p {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .newsletter form {
+      display: flex;
+      max-width: 600px;
+      margin: auto;
+      gap: 10px;
+    }
+
+    .newsletter input {
+      flex: 1;
+      padding: 13px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #0e0e13;
+      color: white;
+    }
+
+    .newsletter button {
+      padding: 13px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #ffb300;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #101016;
+      border-top: 1px solid #292936;
+      margin-top: 40px;
+      padding: 35px 20px;
+      color: #888;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      display: block;
+      margin: 6px 0;
+      color: #999;
+    }
+
+    footer a:hover {
+      color: #ffb300;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #292936;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+      .articles {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 30px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .articles {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 280px;
+      }
+
+      .newsletter form {
+        flex-direction: column;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* MODO CLARO */
+    body.light {
+      background: #f5f5f5;
+      color: #151515;
+    }
+
+    body.light header,
+    body.light footer,
+    body.light .card,
+    body.light .newsletter,
+    body.light .ad,
+    body.light .category,
+    body.light .search-box input {
+      background: white;
+      color: #151515;
+    }
+
+    body.light nav a {
+      color: #333;
+    }
+
+    body.light .card p,
+    body.light .newsletter p {
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+
+    <div class="logo">
+      ZONA <span>FREE FIRE</span>
+    </div>
+
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#guias">Guías</a>
+      <a href="#consejos">Consejos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="theme-btn" onclick="toggleTheme()">
+      🌙
+    </button>
+
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ESPACIO PUBLICITARIO -->
+  <div class="ad">
+    ESPACIO PUBLICITARIO
+    <!--
+      AQUÍ PUEDES PEGAR EL CÓDIGO DE GOOGLE ADSENSE
+    -->
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        TODO SOBRE <span>FREE FIRE</span>
+      </h1>
+
+      <p>
+        Noticias, consejos, estrategias, novedades y guías
+        para mejorar tus partidas y mantenerte actualizado.
+      </p>
+
+      <a href="#noticias" class="btn">
+        Explorar contenido
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- BUSCADOR -->
+  <div class="search-box">
+
+    <input
+      type="text"
+      id="search"
+      placeholder="🔎 Buscar noticias, guías o consejos..."
+      onkeyup="searchArticles()"
+    >
+
+  </div>
+
+  <!-- CATEGORIAS -->
+  <div class="categories">
+
+    <div class="category" onclick="filterCategory('todos')">
+      Todos
+    </div>
+
+    <div class="category" onclick="filterCategory('noticias')">
+      Noticias
+    </div>
+
+    <div class="category" onclick="filterCategory('guias')">
+      Guías
+    </div>
+
+    <div class="category" onclick="filterCategory('consejos')">
+      Consejos
+    </div>
+
+  </div>
+
+  <!-- ARTICULOS -->
+  <section id="noticias">
+
+    <h2 class="section-title">
+      🔥 Últimos artículos
+    </h2>
+
+    <div class="articles" id="articles">
+
+      <article class="card" data-category="noticias">
+
+        <div class="card-img">
+          🎮
+        </div>
+
+        <div class="card-content">
+
+          <div class="tag">
+            NOTICIAS
+          </div>
+
+          <h3>
+            Las novedades que debes conocer
+          </h3>
+
+          <p>
+            Descubre las últimas novedades y cambios
+            que pueden afectar tus partidas.
+          </p>
+
+          <a href="#" class="read">
+            Leer artículo →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card" data-category="guias">
+
+        <div class="card-img">
+          🎯
+        </div>
+
+        <div class="card-content">
+
+          <div class="tag">
+            GUÍAS
+          </div>
+
+          <h3>
+            Cómo mejorar tu puntería
+          </h3>
+
+          <p>
+            Consejos generales para mejorar tu precisión
+            y tomar mejores decisiones durante los combates.
+          </p>
+
+          <a href="#" class="read">
+            Leer artículo →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card" data-category="consejos">
+
+        <div class="card-img">
+          🏆
+        </div>
+
+        <div class="card-content">
+
+          <div class="tag">
+            CONSEJOS
+          </div>
+
+          <h3>
+            Cómo sobrevivir hasta el final
+          </h3>
+
+          <p>
+            Aprende estrategias para administrar tus recursos
+            y moverte por el mapa.
+          </p>
+
+          <a href="#" class="read">
+            Leer artículo →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card" data-category="noticias">
+
+        <div class="card-img">
+          🔥
+        </div>
+
+        <div class="card-content">
+
+          <div class="tag">
+            NOTICIAS
+          </div>
+
+          <h3>
+            Nuevos eventos y recompensas
+          </h3>
+
+          <p>
+            Mantente atento a los eventos disponibles
+            dentro del juego.
+          </p>
+
+          <a href="#" class="read">
+            Leer artículo →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card" data-category="guias">
+
+        <div class="card-img">
+          🗺️
+        </div>
+
+        <div class="card-content">
+
+          <div class="tag">
+            GUÍAS
+          </div>
+
+          <h3>
+            Aprende a utilizar el mapa
+          </h3>
+
+          <p>
+            Conoce algunos consejos para elegir mejores
+            posiciones durante una partida.
+          </p>
+
+          <a href="#" class="read">
+            Leer artículo →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card" data-category="consejos">
+
+        <div class="card-img">
+          ⚡
+        </div>
+
+        <div class="card-content">
+
+          <div class="tag">
+            CONSEJOS
+          </div>
+
+          <h3>
+            Errores que debes evitar
+          </h3>
+
+          <p>
+            Algunos errores comunes pueden hacer que
+            pierdas una partida rápidamente.
+          </p>
+
+          <a href="#" class="read">
+            Leer artículo →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- ANUNCIO -->
+  <div class="ad">
+    ESPACIO PUBLICITARIO
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+
+    <h2>
+      📩 Recibe las novedades
+    </h2>
+
+    <p>
+      Suscríbete para recibir nuevos artículos y noticias.
+    </p>
+
+    <form onsubmit="subscribe(event)">
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Tu correo electrónico"
+        required
+      >
+
+      <button type="submit">
+        Suscribirme
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- ANUNCIO FINAL -->
+  <div class="ad">
+    ESPACIO PUBLICITARIO
+  </div>
+
+</main>
+
+
+<footer id="contacto">
+
+  <div class="footer-content">
+
+    <div>
+
+      <h3>
+        Zona Free Fire
+      </h3>
+
+      <p>
+        Sitio independiente dedicado a contenido,
+        noticias y guías para jugadores.
+      </p>
+
+    </div>
+
+    <div>
+
+      <h3>
+        Información
+      </h3>
+
+      <a href="#">Política de privacidad</a>
+      <a href="#">Política de cookies</a>
+      <a href="#">Términos y condiciones</a>
+
+    </div>
+
+    <div>
+
+      <h3>
+        Contacto
+      </h3>
+
+      <a href="mailto:contacto@tusitio.com">
+        Email
+      </a>
+
+      <a href="#">
+        Facebook
+      </a>
+
+      <a href="#">
+        Instagram
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 Zona Free Fire. Todos los derechos reservados.
+  </div>
+
+</footer>
+
+
+<script>
+
+  /* MODO OSCURO / CLARO */
+
+  function toggleTheme() {
+
+    document.body.classList.toggle("light");
+
+    const button = document.querySelector(".theme-btn");
+
+    if (document.body.classList.contains("light")) {
+      button.textContent = "☀️";
+    } else {
+      button.textContent = "🌙";
+    }
+
+  }
+
+
+  /* BUSCADOR */
+
+  function searchArticles() {
+
+    const search =
+      document.getElementById("search")
+      .value
+      .toLowerCase();
+
+    const cards =
+      document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+
+      const text =
+        card.innerText.toLowerCase();
+
+      if (text.includes(search)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+
+  }
+
+
+  /* FILTRO DE CATEGORIAS */
+
+  function filterCategory(category) {
+
+    const cards =
+      document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+
+      if (
+        category === "todos" ||
+        card.dataset.category === category
+      ) {
+
+        card.style.display = "block";
+
+      } else {
+
+        card.style.display = "none";
+
+      }
+
+    });
+
+  }
+
+
+  /* NEWSLETTER */
+
+  function subscribe(event) {
+
+    event.preventDefault();
+
+    const email =
+      document.getElementById("email").value;
+
+    alert(
+      "¡Gracias por suscribirte! " +
+      email
+    );
+
+    document.getElementById("email").value = "";
+
+  }
+
+</script>
+
+</body>
+</html>
